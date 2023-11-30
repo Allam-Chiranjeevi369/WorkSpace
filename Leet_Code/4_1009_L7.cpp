@@ -17,11 +17,17 @@ main(){
     while(n != 0){
 
         int bit = (n & 1);
-        int x = bit ^ 1;
-        a = (x * pow(2, i)) + a;
+        // int x = bit ^ 1;
+        // a = (x * pow(2, i)) + a;
+        // n = n >> 1;
+        // i++;
+        if (bit == 0){
+
+            a = pow(2, i) + a;
+
+        }
         n = n >> 1;
         i++;
-
     }
     cout << a;
 

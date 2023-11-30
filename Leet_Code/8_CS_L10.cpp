@@ -5,19 +5,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int fndDup(vector<int> &arr){
+int main(){
 
-    int ans = 0;
-    for(int i = 0 ; i < arr.size() ; i++){
+    int a[100] = {5,2,5,4,3,1,6}, j = 1;
+    sort(a, a+7);
+    for(int i = 0 ; i < 7 ; i++){
 
-        ans = ans ^ arr[i];
+        if ((a[i] ^ j) != 0)
+        {
+            cout << a[i];
+            break;
+        }
+        j++;
+        // j = j ^ a[i];
         
-
     }
-    // for(int i = 1 ; i < arr.size() ; i++){
-
-    //         ans = ans ^ i;
-
+    // for (int i = 0; i < 7; i++)
+    // {
+    //     j = j ^ i;
+        
     // }
+    // cout << j ;
 
 }
